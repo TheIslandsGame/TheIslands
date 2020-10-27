@@ -652,6 +652,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1665682911}
   - component: {fileID: 1665682912}
+  - component: {fileID: 1665682913}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -690,6 +691,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 175017120}
   moveSpeed: 0.3
+--- !u!114 &1665682913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665682910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bba780600b1358468031e4e0cfb1a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anchor: {fileID: 175017118}
+  attachedObjects:
+  - {fileID: 519420028}
+  - {fileID: 1718170135}
 --- !u!1 &1718170135
 GameObject:
   m_ObjectHideFlags: 0
