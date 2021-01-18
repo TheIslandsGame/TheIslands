@@ -116,9 +116,9 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
             spriteRenderer.transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
-        float speed = Math.Abs(body.velocity.magnitude / MovementModifier);
-        float speedX = Math.Abs(body.velocity.x / MovementModifier);
-        float speedY = body.velocity.y / MovementModifier;
+        var speed = Math.Abs(body.velocity.magnitude / MovementModifier);
+        var speedX = Math.Abs(body.velocity.x / MovementModifier);
+        var speedY = body.velocity.y / MovementModifier;
         animator.SetFloat(IdSpeedTotal, speed >= MovementThreshold ? speed : 0.0F);
         animator.SetFloat(IdSpeedX, speed >= MovementThreshold ? speedX : 0.0F);
         animator.SetFloat(IdSpeedY, speed >= MovementThreshold ? speedY : 0.0F);
@@ -128,7 +128,7 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
     private void FixedUpdate()
     {
         animator.ResetTrigger(IdTriggerJump);
-        float yVelocity = body.velocity.y;
+        var yVelocity = body.velocity.y;
 
         // TODO don't set y velocity when sideways movement is restricted
         // else players can grab onto walls
