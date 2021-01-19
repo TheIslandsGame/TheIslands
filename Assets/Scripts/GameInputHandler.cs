@@ -2,6 +2,7 @@
 using Render;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using Util;
 using PlayerInput = Gameplay.PlayerInput;
 
@@ -206,10 +207,6 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
     public void OnLeaveGame(InputAction.CallbackContext context)
     {
         Debug.Log("User initiated shutdown");
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        SceneManager.LoadScene("MainMenu");
     }
 }
