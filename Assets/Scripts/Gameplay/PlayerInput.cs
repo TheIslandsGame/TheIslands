@@ -51,6 +51,14 @@ namespace Gameplay
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Leave Game"",
+                    ""type"": ""Button"",
+                    ""id"": ""967494d7-b573-40fa-9af6-ca75101199a0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -249,6 +257,17 @@ namespace Gameplay
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Alt Fire"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bdf4eb0d-275a-40e7-bb90-7ee00f04e440"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Leave Game"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -830,6 +849,7 @@ namespace Gameplay
             m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
             m_Player_Fire = m_Player.FindAction("Fire", throwIfNotFound: true);
             m_Player_AltFire = m_Player.FindAction("Alt Fire", throwIfNotFound: true);
+            m_Player_LeaveGame = m_Player.FindAction("Leave Game", throwIfNotFound: true);
             // UI
             m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
             m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -895,6 +915,7 @@ namespace Gameplay
         private readonly InputAction m_Player_Look;
         private readonly InputAction m_Player_Fire;
         private readonly InputAction m_Player_AltFire;
+        private readonly InputAction m_Player_LeaveGame;
         public struct PlayerActions
         {
             private @PlayerInput m_Wrapper;
@@ -903,6 +924,7 @@ namespace Gameplay
             public InputAction @Look => m_Wrapper.m_Player_Look;
             public InputAction @Fire => m_Wrapper.m_Player_Fire;
             public InputAction @AltFire => m_Wrapper.m_Player_AltFire;
+            public InputAction @LeaveGame => m_Wrapper.m_Player_LeaveGame;
             public InputActionMap Get() { return m_Wrapper.m_Player; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -924,6 +946,9 @@ namespace Gameplay
                     @AltFire.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
                     @AltFire.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
                     @AltFire.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAltFire;
+                    @LeaveGame.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeaveGame;
+                    @LeaveGame.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeaveGame;
+                    @LeaveGame.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeaveGame;
                 }
                 m_Wrapper.m_PlayerActionsCallbackInterface = instance;
                 if (instance != null)
@@ -940,6 +965,9 @@ namespace Gameplay
                     @AltFire.started += instance.OnAltFire;
                     @AltFire.performed += instance.OnAltFire;
                     @AltFire.canceled += instance.OnAltFire;
+                    @LeaveGame.started += instance.OnLeaveGame;
+                    @LeaveGame.performed += instance.OnLeaveGame;
+                    @LeaveGame.canceled += instance.OnLeaveGame;
                 }
             }
         }
@@ -1100,6 +1128,7 @@ namespace Gameplay
             void OnLook(InputAction.CallbackContext context);
             void OnFire(InputAction.CallbackContext context);
             void OnAltFire(InputAction.CallbackContext context);
+            void OnLeaveGame(InputAction.CallbackContext context);
         }
         public interface IUIActions
         {

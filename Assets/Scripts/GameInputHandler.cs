@@ -203,4 +203,13 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
     {
         Debug.Log("Alt fired!");
     }
+    public void OnLeaveGame(InputAction.CallbackContext context)
+    {
+        Debug.Log("User initiated shutdown");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
