@@ -23,11 +23,11 @@ namespace Util
 
         public void AddScene(String path)
         {
-            var original = EditorBuildSettings.scenes;
-            var newSettings = new EditorBuildSettingsScene[original.Length + 1];
-            Array.Copy(original, newSettings, original.Length);
-            newSettings[newSettings.Length - 1] = new EditorBuildSettingsScene(path, true);
-            EditorBuildSettings.scenes = newSettings;
+            //var original = EditorBuildSettings.scenes;
+            //var newSettings = new EditorBuildSettingsScene[original.Length + 1];
+            //Array.Copy(original, newSettings, original.Length);
+            //newSettings[newSettings.Length - 1] = new EditorBuildSettingsScene(path, true);
+            //EditorBuildSettings.scenes = newSettings;
         }
     }
 }

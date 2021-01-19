@@ -530,6 +530,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 737669027}
     m_Modifications:
+    - target: {fileID: 4138881832113844688, guid: 6cbb2cc47e3d49b4aa8ac782bbe88e1a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: lv0
+      objectReference: {fileID: 0}
     - target: {fileID: 4138881832113844702, guid: 6cbb2cc47e3d49b4aa8ac782bbe88e1a, type: 3}
       propertyPath: m_Name
       value: ButtonStart
