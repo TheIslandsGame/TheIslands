@@ -23,6 +23,8 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
     public bool onGround = true; // TODO implement
     public Animator animator;
 
+    public GameObject anzeige; //UI ELements
+
     private Vector2 _currentMovementDirection = Vector2.down; // where the player is currently moving
     private Vector2 _targetMovementDirection; // where the player wants to move
     private Vector2 _currentMovementDirectionStart; // where the player was moving when the inputs changed
@@ -152,6 +154,8 @@ public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
                 body.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 animator.SetTrigger(IdTriggerJump);
                 onGround = false;
+
+                anzeige.SetActive(false);            
             }
         }
         else
