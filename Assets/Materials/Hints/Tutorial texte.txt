@@ -1,0 +1,10 @@
+Drücke A D ,um zu laufen
+Drücke Shift ,um zu sprinten
+Drücke Space ,um zu springen
+Überquere den Fluss sicher
+Schiebe den Stein mit E
+Wenn du sprintest, kannst du weiter springen
+Klettere nach oben
+Hinter manchen Wänden verbergen sich Geheimnisse
+Drücke STRG ,um zu kriechen
+
