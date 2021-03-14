@@ -18,7 +18,7 @@ namespace Chunks
                 var chunkName = $"lv{levelName}_{i+1}";
                 var loader = new GameObject($"ChunkLoader@[{chunkName}]").AddComponent<ChunkLoader>();
                 var chunkTransform = loader.transform;
-                chunkTransform.position = new Vector3(i * chunkXSize, 0F, 0F);
+                chunkTransform.position = new Vector3(-i * chunkXSize, 0F, 0F);
                 Debug.Log($"Loading chunk {chunkName} at {chunkTransform.position}");
                 loader.Load(chunkName);
             }
