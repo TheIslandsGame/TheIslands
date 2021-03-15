@@ -9,8 +9,6 @@ namespace Chunks
 
         public int chunks;
 
-        private int chunkXSize = 300;
-
         private void Awake()
         {
             for (int i = 0; i < chunks; i++)
@@ -18,7 +16,7 @@ namespace Chunks
                 var chunkName = $"lv{levelName}_{i+1}";
                 var loader = new GameObject($"ChunkLoader@[{chunkName}]").AddComponent<ChunkLoader>();
                 var chunkTransform = loader.transform;
-                chunkTransform.position = new Vector3(-i * chunkXSize, 0F, 0F);
+                chunkTransform.position = Vector3.zero;
                 Debug.Log($"Loading chunk {chunkName} at {chunkTransform.position}");
                 loader.Load(chunkName);
             }

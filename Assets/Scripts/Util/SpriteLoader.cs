@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -10,10 +11,10 @@ namespace Util
     public class SpriteLoader : MonoBehaviour
     {
         public Sprite[] sprites;
-        private bool generatePixelCollider;
-        [Range(0.0F, 1.0F)] private float alphaCutoff;
+        [DefaultValue(false)] private bool generatePixelCollider;
+        [Range(0.0F, 1.0F), DefaultValue(0.0F)] private float alphaCutoff;
 
-        private void Regenerate()
+        public void Regenerate()
         {
             foreach (Transform child in transform)
             {
@@ -31,6 +32,7 @@ namespace Util
                 var self = gameObject;
                 obj.isStatic = self.isStatic;
                 obj.tag = self.tag;
+                obj.transform.localScale = Vector3.one;
                 var renderComponent = obj.AddComponent<SpriteRenderer>();
                 var sprite = sprites[i];
                 obj.transform.position += new Vector3(xPos, 0, 0);
