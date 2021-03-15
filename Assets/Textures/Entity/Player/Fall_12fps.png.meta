@@ -1,25 +1,31 @@
 fileFormatVersion: 2
-guid: ea58567fd79b41a408867f242f812698
+guid: 98c23e7581b965e41b9f7385acfb2afa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4563819419404162609
-    second: Animation_Sprint_0
+      213: 581141083363549814
+    second: Fall_12fps_0
   - first:
-      213: 9027749184227372088
-    second: Animation_Sprint_1
+      213: -7914942405784076537
+    second: Fall_12fps_1
   - first:
-      213: -5671499366610759366
-    second: Animation_Sprint_2
+      213: -6267159705754111258
+    second: Fall_12fps_2
   - first:
-      213: 7268207035044594606
-    second: Animation_Sprint_3
+      213: 5825726696106431175
+    second: Fall_12fps_3
   - first:
-      213: 6215428178629317425
-    second: Animation_Sprint_4
+      213: -2901956886501506692
+    second: Fall_12fps_4
   - first:
-      213: -2590108140719941111
-    second: Animation_Sprint_5
+      213: -1452713648108949963
+    second: Fall_12fps_5
+  - first:
+      213: -2693979616829280173
+    second: Fall_12fps_6
+  - first:
+      213: -7148117998151279358
+    second: Fall_12fps_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -38,7 +44,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -50,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -60,19 +66,21 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  alignment: 6
+  spritePivot: {x: 0, y: 0}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -107,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation_Sprint_0
+      name: Fall_12fps_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc9a26f0b6e0aa0c0800000000000000
-      internalID: -4563819419404162609
+      spriteID: 672254e7cb0a01800800000000000000
+      internalID: 581141083363549814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprint_1
+      name: Fall_12fps_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -142,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83ce13f4d02094d70800000000000000
-      internalID: 9027749184227372088
+      spriteID: 70f709d21d9782290800000000000000
+      internalID: -7914942405784076537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprint_2
+      name: Fall_12fps_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -163,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a31105dff59ca41b0800000000000000
-      internalID: -5671499366610759366
+      spriteID: 6e272e3d3739609a0800000000000000
+      internalID: -6267159705754111258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprint_3
+      name: Fall_12fps_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -184,14 +192,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea304dd2acbddd460800000000000000
-      internalID: 7268207035044594606
+      spriteID: 7c21fe7609329d050800000000000000
+      internalID: 5825726696106431175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprint_4
+      name: Fall_12fps_4
       rect:
         serializedVersion: 2
         x: 0
@@ -205,14 +213,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 133572a6ff2a14650800000000000000
-      internalID: 6215428178629317425
+      spriteID: c714492469d2ab7d0800000000000000
+      internalID: -2901956886501506692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprint_5
+      name: Fall_12fps_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -226,8 +234,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90a5a867e561e0cd0800000000000000
-      internalID: -2590108140719941111
+      spriteID: 53eaa1442ace6dbe0800000000000000
+      internalID: -1452713648108949963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_12fps_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3507fb2dfcf0d9ad0800000000000000
+      internalID: -2693979616829280173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fall_12fps_7
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ddd939d88cccc90800000000000000
+      internalID: -7148117998151279358
       vertices: []
       indices: 
       edges: []

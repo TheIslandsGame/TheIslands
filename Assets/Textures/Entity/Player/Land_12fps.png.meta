@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: f06654d48fe4f344d8b2929ae0ec14fd
+guid: 2ed4e6f8ca794304c9e5134709819fd8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2809726306589167304
-    second: Animation_Jump_Ueberarbeitet_0
+      213: -690282561337908659
+    second: Land_12fps_0
   - first:
-      213: 594628973835816611
-    second: Animation_Jump_Ueberarbeitet_1
+      213: -6489927049354407054
+    second: Land_12fps_1
   - first:
-      213: -8281758990097871619
-    second: Animation_Jump_Ueberarbeitet_2
+      213: 4966090726560608836
+    second: Land_12fps_2
   - first:
-      213: 8839010292013521872
-    second: Animation_Jump_Ueberarbeitet_3
+      213: -2226347351675324329
+    second: Land_12fps_3
   - first:
-      213: 5223363148567756647
-    second: Animation_Jump_Ueberarbeitet_4
+      213: 6280327408147061516
+    second: Land_12fps_4
+  - first:
+      213: 6326536513748441503
+    second: Land_12fps_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,7 +38,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -47,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -57,19 +60,21 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  alignment: 6
+  spritePivot: {x: 0, y: 0}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -104,7 +109,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation_Jump_Ueberarbeitet_0
+      name: Land_12fps_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +123,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ce415470372ef620800000000000000
-      internalID: 2809726306589167304
+      spriteID: d42aec0faaf9b66f0800000000000000
+      internalID: -690282561337908659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Jump_Ueberarbeitet_1
+      name: Land_12fps_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -139,14 +144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ae83a6b6eb804800800000000000000
-      internalID: 594628973835816611
+      spriteID: 2731805dbb52fe5a0800000000000000
+      internalID: -6489927049354407054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Jump_Ueberarbeitet_2
+      name: Land_12fps_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -160,14 +165,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfc81dfb318411d80800000000000000
-      internalID: -8281758990097871619
+      spriteID: 442b10f44391be440800000000000000
+      internalID: 4966090726560608836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Jump_Ueberarbeitet_3
+      name: Land_12fps_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -181,14 +186,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dbdc7d87097aaa70800000000000000
-      internalID: 8839010292013521872
+      spriteID: 758b2cc11ec6a11e0800000000000000
+      internalID: -2226347351675324329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Jump_Ueberarbeitet_4
+      name: Land_12fps_4
       rect:
         serializedVersion: 2
         x: 0
@@ -202,8 +207,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76f3f3beb1d1d7840800000000000000
-      internalID: 5223363148567756647
+      spriteID: c0b51cbc084382750800000000000000
+      internalID: 6280327408147061516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Land_12fps_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f999388907f5cc750800000000000000
+      internalID: 6326536513748441503
       vertices: []
       indices: 
       edges: []

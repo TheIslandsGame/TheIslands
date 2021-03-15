@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 2bd51349ed0400d4a9e5812a14e67c15
+guid: aaf30837af546b0448bb547278268476
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9179742538198311912
-    second: Animation_Fall_ueberarbeitet_0
+      213: 601931358185337948
+    second: Crouching-CrouchIdle-Transition_12fps_0
   - first:
-      213: 2231382787015990676
-    second: Animation_Fall_ueberarbeitet_1
-  - first:
-      213: 7270025091362395065
-    second: Animation_Fall_ueberarbeitet_2
-  - first:
-      213: 5822853020667502061
-    second: Animation_Fall_ueberarbeitet_3
+      213: -7357362185939072489
+    second: Crouching-CrouchIdle-Transition_12fps_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +26,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -44,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -54,19 +48,21 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  alignment: 6
+  spritePivot: {x: 0, y: 0}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -101,49 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation_Fall_ueberarbeitet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e36adeb33ff46f70800000000000000
-      internalID: 9179742538198311912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Fall_ueberarbeitet_1
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49d520a82d677fe10800000000000000
-      internalID: 2231382787015990676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Fall_ueberarbeitet_2
+      name: Crouching-CrouchIdle-Transition_12fps_0
       rect:
         serializedVersion: 2
         x: 0
@@ -157,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b315d66d4154e460800000000000000
-      internalID: 7270025091362395065
+      spriteID: c543ecf816d7a5800800000000000000
+      internalID: 601931358185337948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Fall_ueberarbeitet_3
+      name: Crouching-CrouchIdle-Transition_12fps_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -178,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ded5234b8fdeec050800000000000000
-      internalID: 5822853020667502061
+      spriteID: 71ac537a21665e990800000000000000
+      internalID: -7357362185939072489
       vertices: []
       indices: 
       edges: []

@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 1be4d17e28acfeb43b9a9483a9cb8c35
+guid: 95a138f97f0310b459a58f25deff363c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4015605648582293930
-    second: Animation_Walk_ueberarbeitet_0
+      213: -2492781429150090282
+    second: Idle_12fps_0
   - first:
-      213: -1233949880188471828
-    second: Animation_Walk_ueberarbeitet_1
+      213: 6870497060215837727
+    second: Idle_12fps_1
   - first:
-      213: 525442110586838671
-    second: Animation_Walk_ueberarbeitet_2
+      213: 7053496170300321823
+    second: Idle_12fps_2
   - first:
-      213: -367061149029461120
-    second: Animation_Walk_ueberarbeitet_3
+      213: -3484962287553286373
+    second: Idle_12fps_3
   - first:
-      213: 1663927585142143348
-    second: Animation_Walk_ueberarbeitet_4
+      213: 9201638833594149204
+    second: Idle_12fps_4
   - first:
-      213: -4280422601646316923
-    second: Animation_Walk_ueberarbeitet_5
+      213: -8334306593676807869
+    second: Idle_12fps_5
   - first:
-      213: -4535931944481493853
-    second: Animation_Walk_ueberarbeitet_6
+      213: 3521577082024002044
+    second: Idle_12fps_6
   - first:
-      213: 6621006540304936378
-    second: Animation_Walk_ueberarbeitet_7
+      213: -2646908754212373056
+    second: Idle_12fps_7
+  - first:
+      213: 1987347760835282968
+    second: Idle_12fps_8
+  - first:
+      213: 2459614506595804332
+    second: Idle_12fps_9
+  - first:
+      213: 286015544782059631
+    second: Idle_12fps_10
+  - first:
+      213: 8231755616344234095
+    second: Idle_12fps_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,7 +56,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -56,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -66,19 +78,21 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  alignment: 6
+  spritePivot: {x: 0, y: 0}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -113,7 +127,175 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_0
+      name: Idle_12fps_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db71dc5f7cd76dd0800000000000000
+      internalID: -2492781429150090282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14d780cca8e85f50800000000000000
+      internalID: 6870497060215837727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f103457556d03e160800000000000000
+      internalID: 7053496170300321823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3072
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fe0ca734de2afc0800000000000000
+      internalID: -3484962287553286373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459a1db44c9c2bf70800000000000000
+      internalID: 9201638833594149204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341b2b26f48965c80800000000000000
+      internalID: -8334306593676807869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1823fa2b72fd030800000000000000
+      internalID: 3521577082024002044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_7
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2048
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cdbc40138a444bd0800000000000000
+      internalID: -2646908754212373056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Idle_12fps_8
       rect:
         serializedVersion: 2
         x: 0
@@ -127,14 +309,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa9bcc1df0c4ab730800000000000000
-      internalID: 4015605648582293930
+      spriteID: 81841c1524a749b10800000000000000
+      internalID: 1987347760835282968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_1
+      name: Idle_12fps_9
       rect:
         serializedVersion: 2
         x: 1024
@@ -148,14 +330,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce5fab82f1120eee0800000000000000
-      internalID: -1233949880188471828
+      spriteID: ca46a06bc5e422220800000000000000
+      internalID: 2459614506595804332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_2
+      name: Idle_12fps_10
       rect:
         serializedVersion: 2
         x: 2048
@@ -169,14 +351,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8e5f8fc0deba4700800000000000000
-      internalID: 525442110586838671
+      spriteID: f6879f26f9128f300800000000000000
+      internalID: 286015544782059631
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_3
+      name: Idle_12fps_11
       rect:
         serializedVersion: 2
         x: 3072
@@ -190,92 +372,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 083904964dfe7eaf0800000000000000
-      internalID: -367061149029461120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 479fe54a255771710800000000000000
-      internalID: 1663927585142143348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_5
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 582615c8252e894c0800000000000000
-      internalID: -4280422601646316923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_6
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ac65dbcde12d01c0800000000000000
-      internalID: -4535931944481493853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Walk_ueberarbeitet_7
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: abde96a6e5a82eb50800000000000000
-      internalID: 6621006540304936378
+      spriteID: f68560e8e121d3270800000000000000
+      internalID: 8231755616344234095
       vertices: []
       indices: 
       edges: []

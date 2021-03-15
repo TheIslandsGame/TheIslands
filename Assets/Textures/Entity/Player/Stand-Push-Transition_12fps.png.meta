@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 5fdf9ccc57acba040b78af38ac2603c5
+guid: 29984e930c361cb40abed83456600c30
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1846626175477495657
-    second: Animation_Sprintsprung_0
+      213: 7297256909972871992
+    second: Stand-Push-Transition_12fps_0
   - first:
-      213: 6389410062365272404
-    second: Animation_Sprintsprung_1
+      213: -7302218439539835979
+    second: Stand-Push-Transition_12fps_1
   - first:
-      213: -2873247054564173326
-    second: Animation_Sprintsprung_2
+      213: 4617761975499887120
+    second: Stand-Push-Transition_12fps_2
   - first:
-      213: 1330665107772294533
-    second: Animation_Sprintsprung_3
-  - first:
-      213: -7592893261796851847
-    second: Animation_Sprintsprung_4
+      213: -2478706013471659906
+    second: Stand-Push-Transition_12fps_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -35,7 +32,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -47,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -57,19 +54,21 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
-  spriteExtrude: 1
+  spriteExtrude: 0
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  alignment: 6
+  spritePivot: {x: 0, y: 0}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -104,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animation_Sprintsprung_0
+      name: Stand-Push-Transition_12fps_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 798c9b9f6477f56e0800000000000000
-      internalID: -1846626175477495657
+      spriteID: 83b92b14f70154560800000000000000
+      internalID: 7297256909972871992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprintsprung_1
+      name: Stand-Push-Transition_12fps_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -139,56 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 459a693699ebba850800000000000000
-      internalID: 6389410062365272404
+      spriteID: 5bbbbee940f49aa90800000000000000
+      internalID: -7302218439539835979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animation_Sprintsprung_2
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2f9d3c8e60d2028d0800000000000000
-      internalID: -2873247054564173326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Sprintsprung_3
-      rect:
-        serializedVersion: 2
-        x: 3072
-        y: 1024
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58546c78dd8777210800000000000000
-      internalID: 1330665107772294533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Animation_Sprintsprung_4
+      name: Stand-Push-Transition_12fps_2
       rect:
         serializedVersion: 2
         x: 0
@@ -202,8 +159,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f3429aecf90a690800000000000000
-      internalID: -7592893261796851847
+      spriteID: 0121afefc06951040800000000000000
+      internalID: 4617761975499887120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stand-Push-Transition_12fps_3
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78a564730ed99dd0800000000000000
+      internalID: -2478706013471659906
       vertices: []
       indices: 
       edges: []
