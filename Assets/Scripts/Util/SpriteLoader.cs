@@ -35,7 +35,7 @@ namespace Util
                 obj.transform.localScale = Vector3.one;
                 var renderComponent = obj.AddComponent<SpriteRenderer>();
                 var sprite = sprites[i];
-                obj.transform.position += new Vector3(xPos, 0, 0);
+                obj.transform.position = new Vector3(xPos, 0, 0);
                 xPos += sprite.texture.width / sprite.pixelsPerUnit;
                 renderComponent.sprite = sprite;
                 obj.transform.parent = transform;

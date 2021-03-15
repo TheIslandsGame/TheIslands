@@ -47,13 +47,10 @@ namespace Util
                     var folderName = path.Substring(0, path.LastIndexOf('/'));
                     fileName = fileName.Substring(0, fileName.LastIndexOf('.'));
                     Debug.Log($"Loading {fileName} in {folderName}");
-                    if (!lookup.ContainsKey(folderName))
-                    {
-                        lookup.Add(folderName, new List<Sprite>());
-                    }
                     Texture2D texRef = AssetDatabase.LoadAssetAtPath<Texture2D>(fullPath);
-                    var sprite = Sprite.Create(texRef, new Rect(0, 0, texRef.width, texRef.height), new Vector2(0.5F, 0.05F), 100F, 0, SpriteMeshType.FullRect, Vector4.zero, false);
-                    lookup[folderName].Add(sprite);
+                    var sprite = Sprite.Create(texRef, new Rect(0, 0, texRef.width, texRef.height), new Vector2(0.5F, 0.5F), 100F, 0, SpriteMeshType.FullRect, Vector4.zero, false);
+                    
+                    lookup.ComputeIfAbsent(folderName, k => new List<Sprite>()).Add(sprite);
                 }
                 
                 Debug.Log("Parsed Asset Database, creating GameObjects..");
