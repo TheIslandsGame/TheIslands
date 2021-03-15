@@ -25,20 +25,21 @@ namespace Util
 #endif
             }
             var uuid = Guid.NewGuid();
-            var xPos = 0.0F;
+            var width = 0.0F;
+            var height = 0.0F;
             for (var i = 0; i < sprites.Length; i++)
             {
                 var obj = new GameObject($"Combined Sprite #{i} ({uuid})");
+                obj.transform.SetParent(transform);
                 var self = gameObject;
-                obj.isStatic = self.isStatic;
                 obj.tag = self.tag;
                 obj.transform.localScale = Vector3.one;
                 var renderComponent = obj.AddComponent<SpriteRenderer>();
                 var sprite = sprites[i];
-                obj.transform.position = new Vector3(xPos, 0, 0);
-                xPos += sprite.texture.width / sprite.pixelsPerUnit;
+                height = Mathf.Max(height, sprite.texture.height / sprite.pixelsPerUnit);
+                width += sprite.texture.width / sprite.pixelsPerUnit;
+                obj.transform.localPosition = new Vector3(width, 0, 0);
                 renderComponent.sprite = sprite;
-                obj.transform.parent = transform;
                 if (generatePixelCollider)
                 {
                     obj.AddComponent<PolygonCollider2D>();
@@ -46,7 +47,15 @@ namespace Util
                     pxlCollider.alphaCutoff = alphaCutoff;
                     pxlCollider.Regenerate();
                 }
+                obj.isStatic = self.isStatic;
             }
+            if (!gameObject.TryGetComponent<BoxCollider2D>(out var rect))
+            {
+                rect = gameObject.AddComponent<BoxCollider2D>();
+            }
+            rect.size = new Vector2(width, height);
+            rect.offset = new Vector2(rect.size.x / 2, 0);
+            rect.isTrigger = true;
         }
 
 #if UNITY_EDITOR

@@ -48,7 +48,7 @@ namespace Util
                     fileName = fileName.Substring(0, fileName.LastIndexOf('.'));
                     Debug.Log($"Loading {fileName} in {folderName}");
                     Texture2D texRef = AssetDatabase.LoadAssetAtPath<Texture2D>(fullPath);
-                    var sprite = Sprite.Create(texRef, new Rect(0, 0, texRef.width, texRef.height), new Vector2(0.5F, 0.5F), 100F, 0, SpriteMeshType.FullRect, Vector4.zero, false);
+                    var sprite = Sprite.Create(texRef, new Rect(0, 0, texRef.width, texRef.height), new Vector2(1F, 1F), 100F, 0, SpriteMeshType.FullRect, Vector4.zero, false);
                     
                     lookup.ComputeIfAbsent(folderName, k => new List<Sprite>()).Add(sprite);
                 }
@@ -58,9 +58,9 @@ namespace Util
                 foreach (var entry in lookup)
                 {
                     var obj = new GameObject(entry.Key);
-                    obj.transform.position = Vector3.zero;
+                    obj.transform.SetParent(script.transform);
+                    obj.transform.localPosition = Vector3.zero;
                     obj.transform.localScale = Vector3.one;
-                    obj.transform.parent = script.transform;
                     var loader = obj.AddComponent<SpriteLoader>();
                     loader.sprites = entry.Value.ToArray();
                     loader.Regenerate();
