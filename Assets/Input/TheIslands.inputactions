@@ -22,28 +22,36 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire",
-                    "type": "Button",
-                    "id": "8be13016-fcb1-409a-8eb7-7a795c7af80b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Alt Fire",
-                    "type": "Button",
-                    "id": "b4439666-450b-40a7-8c3c-23a1caa0d043",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Leave Game",
                     "type": "Button",
                     "id": "967494d7-b573-40fa-9af6-ca75101199a0",
                     "expectedControlType": "Button",
                     "processors": "",
+                    "interactions": "Hold(duration=1.5)"
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "e7177ab7-4b2a-4f66-99b1-44bf589c1932",
+                    "expectedControlType": "Button",
+                    "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "4c2bd01e-8515-4be7-98c7-ea232107a89b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "0a076dd6-ee82-4a23-8d9d-92dee2295e1d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold"
                 }
             ],
             "bindings": [
@@ -225,34 +233,67 @@
                 },
                 {
                     "name": "",
-                    "id": "d2d1be62-e81e-40e1-9bde-597de0b55663",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "676394ae-f2cb-4eeb-b073-e1dd035aa162",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Alt Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "bdf4eb0d-275a-40e7-bb90-7ee00f04e440",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Leave Game",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df97efe8-3c6c-402b-bfba-6733497bc34a",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87139c12-8b87-4595-bd20-69d2d485ecba",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fea17fe7-a531-4353-b212-af31550db6dd",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1a925cbb-b241-4127-a0a1-db020995e37c",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5bf04966-ccf6-46bb-abab-d67676c6c4aa",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
