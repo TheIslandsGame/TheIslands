@@ -1,10 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class hintriver : MonoBehaviour
+namespace Menu
 {
+    public class Hintriver : MonoBehaviour
+    {
         public GameObject anzeige2;
 
 
@@ -16,7 +15,7 @@ public class hintriver : MonoBehaviour
 
         void OnTriggerEnter2D(Collider2D player)
         {
-            if (player.tag == "Player")
+            if (player.CompareTag("Player"))
             {
                 //anzeige = GameObject.FindGameObjectWithTag("UIElements");
                 anzeige2.SetActive(true);
@@ -26,12 +25,13 @@ public class hintriver : MonoBehaviour
         }
         void OnTriggerExit2D(Collider2D player)
         {
-            if (player.tag == "Player")
+            if (player.CompareTag("Player"))
             {
                 anzeige2.SetActive(false);
 
             }
             Debug.Log("TRIGGER exit");
-    }
+        }
 
+    }
 }
