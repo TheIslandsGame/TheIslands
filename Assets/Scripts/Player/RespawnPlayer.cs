@@ -7,7 +7,7 @@ namespace Player
         public float yThreshold = -2;
         public Vector3 latestCheckpoint;
 
-        private void UpdateCheckpoint()
+        public void UpdateCheckpoint()
         {
             latestCheckpoint = gameObject.transform.position;
         }

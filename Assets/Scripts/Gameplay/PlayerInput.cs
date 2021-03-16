@@ -58,7 +58,7 @@ namespace Gameplay
                     ""id"": ""4c2bd01e-8515-4be7-98c7-ea232107a89b"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Sprint"",
@@ -66,7 +66,7 @@ namespace Gameplay
                     ""id"": ""0a076dd6-ee82-4a23-8d9d-92dee2295e1d"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Hold""
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
