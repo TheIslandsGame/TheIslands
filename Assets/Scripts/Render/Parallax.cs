@@ -1,51 +1,43 @@
 ﻿using System;
 using UnityEngine;
 
-// For usage apply the script directly to the element you wish to apply parallaxing
-// Based on Brackeys 2D parallaxing script http://brackeys.com/
 namespace Render
 {
     public class Parallax : MonoBehaviour
     {
-        Transform cam; // Camera reference (of its transform)
-        Vector3 previousCamPos;
+        // one square = 20.48 units
+        private const float MainWidth = 245.76F; // width of the whole "main" layer, 12 squares
+        public float width; // the width of this element, in units
 
-        public float distanceX = 0f; // Distance of the item (z-index based) 
-        public float distanceY = 0f;
+        public float progress = 1.0F;
+        public float toAdd = 0.0F;
+        public float renderScale = 1.0F;
 
-        public float smoothingX = 1f; // Smoothing factor of parrallax effect
-        public float smoothingY = 1f;
+        private GameObject playerCamera;
+        private Vector3 startPos;
+        private Vector3 origin;
 
         private void Start()
         {
-            cam = GameObject.FindWithTag("MainCamera").transform;
+            playerCamera = GameObject.FindWithTag("MainCamera");
+            startPos = playerCamera.transform.position;
+            origin = transform.position;
         }
 
-        void Update () {
-            if (distanceX != 0f) {
-                float parallaxX = (previousCamPos.x - cam.position.x) * distanceX;
-                var transform1 = transform;
-                var position = transform1.position;
-                Vector3 backgroundTargetPosX = new Vector3(position.x + parallaxX, 
-                    position.y, 
-                    position.z);
-			
-                // Lerp to fade between positions
-                transform.position = Vector3.Lerp(position, backgroundTargetPosX, smoothingX * Time.deltaTime);
+        private void Update()
+        {
+            renderScale = MainWidth / width; // 1 / scale
+            var xDiff = startPos.x - playerCamera.transform.position.x;
+            progress = Mathf.Clamp(xDiff / MainWidth, 0.0F, 1.0F); // left = 0.0, right = 1.0
+
+            if (renderScale < 1.0F)
+            {
+                renderScale = 1.0F / renderScale;
             }
 
-            if (distanceY != 0f) {
-                float parallaxY = (previousCamPos.y - cam.position.y) * distanceY;
-                var position = transform.position;
-                Vector3 backgroundTargetPosY = new Vector3(position.x, 
-                    position.y + parallaxY, 
-                    position.z);
-			
-                position = Vector3.Lerp(position, backgroundTargetPosY, smoothingY * Time.deltaTime);
-                transform.position = position;
-            }
+            toAdd = -progress * renderScale;
 
-            previousCamPos = cam.position;	
+            transform.position = new Vector3(origin.x + toAdd * width, origin.y, origin.z);
         }
     }
 }
