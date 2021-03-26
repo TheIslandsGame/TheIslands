@@ -623,11 +623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yThreshold: -10
   latestCheckpoint: {x: 84.38, y: 6.67, z: 0}
-  collider: {fileID: 2106526049}
-  water:
-    serializedVersion: 2
-    m_Bits: 16
-  kill:
+  collisionTrigger: {fileID: 2106526049}
+  killPlayer:
     serializedVersion: 2
     m_Bits: 128
 --- !u!114 &7449238199216940501

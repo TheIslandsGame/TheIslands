@@ -7,21 +7,12 @@ namespace Player
     {
         public float yThreshold = -2;
         public Vector3 latestCheckpoint;
-        public Collider2D collider;
-        [SerializeField] private LayerMask water;
-        [SerializeField] private LayerMask kill;
-
-        private LayerMask all;
+        public Collider2D collisionTrigger;
+        [SerializeField] private LayerMask killPlayer;
 
         public void UpdateCheckpoint()
         {
             latestCheckpoint = gameObject.transform.position;
-        }
-
-        private void Awake()
-        {
-            all = new LayerMask {value = water.value | kill.value};
-            
         }
 
         private void Start()
@@ -31,7 +22,7 @@ namespace Player
 
         private void Reset()
         {
-            latestCheckpoint = this.transform.position;
+            latestCheckpoint = gameObject.transform.position;
         }
 
         public void DoRespawn(string cause)
@@ -42,12 +33,12 @@ namespace Player
 
         private void FixedUpdate()
         {
-            if (gameObject.transform.position.y < yThreshold)
+            if (collisionTrigger.transform.position.y < yThreshold)
             {
                 DoRespawn("void");
             }
             
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(collider.gameObject.transform.position, 0.5F, all);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(collisionTrigger.transform.position, 0.5F, killPlayer);
             for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].gameObject == gameObject) continue;
