@@ -13,6 +13,14 @@ namespace Util
         public Sprite[] sprites;
         [DefaultValue(false)] private bool generatePixelCollider;
         [Range(0.0F, 1.0F), DefaultValue(0.0F)] private float alphaCutoff;
+        private int gridsizeX;
+        private int gridsizeY;
+
+        public void SetDimensions(int width, int height)
+        {
+            gridsizeX = width;
+            gridsizeY = height;
+        }
 
         public void Regenerate()
         {
@@ -27,34 +35,41 @@ namespace Util
             var uuid = Guid.NewGuid();
             var width = 0.0F;
             var height = 0.0F;
-            for (var i = 0; i < sprites.Length; i++)
+            var maxHeight = 0.0F;
+            for (var x = 0; x < gridsizeX; x++)
             {
-                var obj = new GameObject($"Combined Sprite #{i} ({uuid})");
-                obj.transform.SetParent(transform);
-                var self = gameObject;
-                obj.tag = self.tag;
-                obj.transform.localScale = Vector3.one;
-                var renderComponent = obj.AddComponent<SpriteRenderer>();
-                var sprite = sprites[i];
-                height = Mathf.Max(height, sprite.texture.height / sprite.pixelsPerUnit);
-                width += sprite.texture.width / sprite.pixelsPerUnit;
-                obj.transform.localPosition = new Vector3(width, 0, 0);
-                renderComponent.sprite = sprite;
-                if (generatePixelCollider)
+                for (var y = 0; y < gridsizeY; y++)
                 {
-                    obj.AddComponent<PolygonCollider2D>();
-                    PixelCollider2D pxlCollider = obj.AddComponent<PixelCollider2D>();
-                    pxlCollider.alphaCutoff = alphaCutoff;
-                    pxlCollider.Regenerate();
+                    var i = y * gridsizeX + x;
+                    var obj = new GameObject($"Combined Sprite #{i} ({uuid})");
+                    obj.transform.SetParent(transform);
+                    var self = gameObject;
+                    obj.tag = self.tag;
+                    obj.transform.localScale = Vector3.one;
+                    var renderComponent = obj.AddComponent<SpriteRenderer>();
+                    var sprite = sprites[i];
+                    height = y == 0 ? 0 : sprite.texture.height / sprite.pixelsPerUnit;
+                    width += sprite.texture.width / sprite.pixelsPerUnit;
+                    maxHeight = Math.Max(maxHeight, sprite.texture.height / sprite.pixelsPerUnit);
+                    obj.transform.localPosition = new Vector3(width, height, 0);
+                    renderComponent.sprite = sprite;
+                    if (generatePixelCollider)
+                    {
+                        obj.AddComponent<PolygonCollider2D>();
+                        PixelCollider2D pxlCollider = obj.AddComponent<PixelCollider2D>();
+                        pxlCollider.alphaCutoff = alphaCutoff;
+                        pxlCollider.Regenerate();
+                    }
+                    obj.isStatic = self.isStatic;
                 }
-                obj.isStatic = self.isStatic;
             }
             if (!gameObject.TryGetComponent<BoxCollider2D>(out var rect))
             {
                 rect = gameObject.AddComponent<BoxCollider2D>();
             }
-            rect.size = new Vector2(width, height);
-            rect.offset = new Vector2(rect.size.x / 2, 0);
+            rect.size = new Vector2(width, maxHeight);
+            var rSize = rect.size;
+            rect.offset = new Vector2(rSize.x / 2, -rSize.y / 2);
             rect.isTrigger = true;
         }
 
