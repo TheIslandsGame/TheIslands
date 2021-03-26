@@ -44,7 +44,7 @@ namespace Util
                 var existingSizes = Array.ConvertAll(dimensions.ComputeIfAbsent(folderName, k => "0_0").Split('_'), int.Parse);
                 var maxX = Math.Max(sizes[0], existingSizes[0]);
                 var maxY = Math.Max(sizes[1], existingSizes[1]);
-                dimensions[folderName] = $"{maxX + 1}_{maxY + 1}";
+                dimensions[folderName] = $"{maxX}_{maxY}";
                 yield return null;
             }
             
@@ -58,7 +58,7 @@ namespace Util
                 var loader = obj.AddComponent<SpriteLoader>();
                 loader.sprites = entry.Value.ToArray();
                 var sizes = Array.ConvertAll(dimensions[entry.Key].Split('_'), int.Parse);
-                loader.SetDimensions(sizes[0], sizes[1]);
+                loader.SetDimensions(sizes[1] + 1, sizes[0] + 1);
                 loader.Regenerate();
                 yield return null;
             }

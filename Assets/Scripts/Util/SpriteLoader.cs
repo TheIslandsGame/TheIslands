@@ -32,26 +32,36 @@ namespace Util
                 Destroy(child.gameObject);
 #endif
             }
-            var uuid = Guid.NewGuid();
-            var width = 0.0F;
             var height = 0.0F;
             var maxHeight = 0.0F;
-            for (var x = 0; x < gridsizeX; x++)
+            var maxWidth = 0.0F;
+            // NOTE: we assume that all tiles have the same dimensions
+            for (var y = 0; y < gridsizeY; y++)
             {
-                for (var y = 0; y < gridsizeY; y++)
+                var heightOffset = gridsizeY - y - 1;
+                var width = 0.0F;
+                for (var x = 0; x < gridsizeX; x++)
                 {
-                    var i = y * gridsizeX + x;
-                    var obj = new GameObject($"Combined Sprite #{i} ({uuid})");
+                    var idx = y * gridsizeX + x;
+                    var obj = new GameObject($"Combined Sprite #{idx} ({x} / {y})");
                     obj.transform.SetParent(transform);
                     var self = gameObject;
                     obj.tag = self.tag;
                     obj.transform.localScale = Vector3.one;
                     var renderComponent = obj.AddComponent<SpriteRenderer>();
-                    var sprite = sprites[i];
-                    height = y == 0 ? 0 : sprite.texture.height / sprite.pixelsPerUnit;
+                    var sprite = sprites[idx];
+                    var spriteH = sprite.texture.height / sprite.pixelsPerUnit;
+                    if (x == 0)
+                    {
+                        height += spriteH;
+                    }
+                    
+                    obj.transform.localPosition = new Vector3(width, -height, 0);
+                    
                     width += sprite.texture.width / sprite.pixelsPerUnit;
-                    maxHeight = Math.Max(maxHeight, sprite.texture.height / sprite.pixelsPerUnit);
-                    obj.transform.localPosition = new Vector3(width, height, 0);
+                    maxHeight = Math.Max(maxHeight, height);
+                    maxWidth = Math.Max(maxWidth, width);
+                    
                     renderComponent.sprite = sprite;
                     if (generatePixelCollider)
                     {
@@ -63,14 +73,14 @@ namespace Util
                     obj.isStatic = self.isStatic;
                 }
             }
-            if (!gameObject.TryGetComponent<BoxCollider2D>(out var rect))
-            {
-                rect = gameObject.AddComponent<BoxCollider2D>();
-            }
-            rect.size = new Vector2(width, maxHeight);
-            var rSize = rect.size;
-            rect.offset = new Vector2(rSize.x / 2, -rSize.y / 2);
-            rect.isTrigger = true;
+            //if (!gameObject.TryGetComponent<BoxCollider2D>(out var rect))
+            //{
+            //    rect = gameObject.AddComponent<BoxCollider2D>();
+            //}
+            //rect.size = new Vector2(maxWidth, maxHeight);
+            //var rSize = rect.size;
+            //rect.offset = new Vector2(rSize.x / 2, 0);
+            //rect.isTrigger = true;
         }
 
 #if UNITY_EDITOR
