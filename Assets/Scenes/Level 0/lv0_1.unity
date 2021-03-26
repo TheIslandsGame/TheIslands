@@ -476,8 +476,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1842093793
-  m_SortingLayer: -1
+  m_SortingLayerID: -960998473
+  m_SortingLayer: 1
   m_SortingOrder: -2
   m_Sprite: {fileID: 1214202776}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5730,7 +5730,7 @@ GameObject:
   - component: {fileID: 838532361}
   - component: {fileID: 838532360}
   - component: {fileID: 838532359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Combined Sprite #0 (cffa919b-0d2d-41e0-8859-a9ec53e6f4b1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17346,7 +17346,7 @@ GameObject:
   - component: {fileID: 915840914}
   - component: {fileID: 915840913}
   - component: {fileID: 915840912}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Combined Sprite #2 (cffa919b-0d2d-41e0-8859-a9ec53e6f4b1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17786,8 +17786,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1842093793
-  m_SortingLayer: -1
+  m_SortingLayerID: -960998473
+  m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: 1882299102}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -17905,7 +17905,7 @@ GameObject:
   - component: {fileID: 1007291293}
   - component: {fileID: 1007291295}
   - component: {fileID: 1007291294}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Linie(n) Spieler (kein Paralax)/Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19453,7 +19453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198537429}
   - component: {fileID: 1198537430}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Combined Sprite #1 (2161edd3-3ccc-4264-b1ae-6de740ff7aad)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20576,7 +20576,7 @@ GameObject:
   - component: {fileID: 1449258050}
   - component: {fileID: 1449258052}
   - component: {fileID: 1449258051}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Linie(n) Spieler (kein Paralax)/Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20865,7 +20865,7 @@ GameObject:
   - component: {fileID: 1515956490}
   - component: {fileID: 1515956489}
   - component: {fileID: 1515956488}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Combined Sprite #1 (cffa919b-0d2d-41e0-8859-a9ec53e6f4b1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27384,8 +27384,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1842093793
-  m_SortingLayer: -1
+  m_SortingLayerID: -960998473
+  m_SortingLayer: 1
   m_SortingOrder: -2
   m_Sprite: {fileID: 896522345}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -28449,8 +28449,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1842093793
-  m_SortingLayer: -1
+  m_SortingLayerID: -960998473
+  m_SortingLayer: 1
   m_SortingOrder: -1
   m_Sprite: {fileID: 4671254}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -28849,7 +28849,7 @@ GameObject:
   - component: {fileID: 1976373803}
   - component: {fileID: 1976373802}
   - component: {fileID: 1976373801}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Combined Sprite #0 (a3166bd4-1871-4a15-9b0e-44310b49e9b8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
