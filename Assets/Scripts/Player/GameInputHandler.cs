@@ -1,31 +1,61 @@
-﻿using UnityEngine;
+﻿using Player.Movement;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using PlayerInput = Gameplay.PlayerInput;
 
 namespace Player
 {
-    public class GameInputHandler : MonoBehaviour, PlayerInput.IPlayerActions
+    public class GameInputHandler : MonoBehaviour, IGameInputHandler
     {
 
         public CharacterController2D controller;
         public bool isCrouch;
         public bool isJump;
-        public Vector2 movement;
+        public bool isSprint;
+
+        public MovementMode movementMode = MovementMode.Default;
+
+        public enum MovementMode
+        {
+            DebugFlight,
+            Default
+        }
+        
         public float runSpeed = 40F;
+
+        private IPlayerInputHandler movementHandler;
 
         // TODO remove
         public GameObject player;
-        public float speed = 5F;
 
         private PlayerInput input;
 
         private void Awake()
         {
             input = new PlayerInput();
-            input.Player.SetCallbacks(this);
+            InitMovement();
+            input.Player.SetCallbacks(movementHandler);
         }
-        
+
+        private void InitMovement()
+        {
+            while (true)
+            {
+                switch (movementMode)
+                {
+                    case MovementMode.DebugFlight:
+                        movementHandler = new FlightMovementHandler(player);
+                        break;
+                    case MovementMode.Default:
+                    default:
+                        movementHandler = new DefaultMovementHandler(this, player);
+                        continue;
+                }
+                break;
+            }
+        }
+
         private void OnEnable()
         {
             input.Player.Enable();
@@ -36,21 +66,14 @@ namespace Player
             input.Player.Disable();
         }
 
-        public void OnMove(InputAction.CallbackContext context)
-        {
-            movement = context.ReadValue<Vector2>();
-            if (movement.y >= 0.5F)
-            {
-                isJump = true;
-            }
-        }
+        
         
         public void OnLook(InputAction.CallbackContext context)
         {
             // TODO is this even needed?
         }
         
-        public void OnLeaveGame(InputAction.CallbackContext context)
+        public static void LeaveGame()
         {
 #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
@@ -79,10 +102,26 @@ namespace Player
 
         private void FixedUpdate()
         {
-            player.transform.Translate(movement.x * speed * Time.fixedDeltaTime, movement.y * speed * Time.fixedDeltaTime, 0);
+            movementHandler.Tick(Time.fixedDeltaTime);
             //isJump = movement.y > 0.5F;
             //controller.Move(-movement.x * Time.fixedDeltaTime, isCrouch, isJump);
             //isJump = false;
+        }
+        public void SetJumping(bool jumping)
+        {
+            isJump = jumping;
+        }
+        public void SetCrouching(bool crouching)
+        {
+            isCrouch = crouching;
+        }
+        public void SetSprinting(bool sprinting)
+        {
+            isSprint = sprinting;
+        }
+        public CharacterController2D GetController()
+        {
+            return controller;
         }
     }
 }
