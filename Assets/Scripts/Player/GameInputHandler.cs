@@ -49,8 +49,8 @@ namespace Player
                         break;
                     case MovementMode.Default:
                     default:
-                        movementHandler = new DefaultMovementHandler(this, player);
-                        continue;
+                        movementHandler = new DefaultMovementHandler(this, runSpeed);
+                        break;
                 }
                 break;
             }
@@ -82,24 +82,6 @@ namespace Player
 #endif
         }
         
-        public void OnJump(InputAction.CallbackContext context)
-        {
-            if (context.performed) isJump = true;
-            if (context.canceled) isJump = false;
-        }
-        
-        public void OnCrouch(InputAction.CallbackContext context)
-        {
-            if (context.performed) isCrouch = true;
-            if (context.canceled) isCrouch = false;
-        }
-        
-        public void OnSprint(InputAction.CallbackContext context)
-        {
-            //if (context.performed) isSprint = true;
-            //if (context.canceled) isSprint = false;
-        }
-
         private void FixedUpdate()
         {
             movementHandler.Tick(Time.fixedDeltaTime);
@@ -118,6 +100,18 @@ namespace Player
         public void SetSprinting(bool sprinting)
         {
             isSprint = sprinting;
+        }
+        public bool IsJumping()
+        {
+            return isJump;
+        }
+        public bool IsCrouching()
+        {
+            return isCrouch;
+        }
+        public bool IsSprinting()
+        {
+            return isSprint;
         }
         public CharacterController2D GetController()
         {
