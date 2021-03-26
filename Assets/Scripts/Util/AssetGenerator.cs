@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.EditorCoroutines.Editor;
-using UnityEditor;
 using UnityEngine;
 
 #if UNITY_EDITOR
+using Unity.EditorCoroutines.Editor;
+using UnityEditor;
+#endif
+
 namespace Util
 {
     public class AssetGenerator : MonoBehaviour
@@ -17,7 +19,8 @@ namespace Util
             return $"Assets/Textures/Backgrounds/{levelName}";
         }
     }
-
+    
+#if UNITY_EDITOR
     [CustomEditor(typeof(AssetGenerator))]
     public class AssetGeneratorEditor : Editor
     {
@@ -83,5 +86,5 @@ namespace Util
             }
         }
     }
-}
 #endif
+}
