@@ -26,6 +26,8 @@ namespace Player
         private Rigidbody2D m_Rigidbody2D;
         private bool m_FacingRight = true; // For determining which way the player is currently facing.
         private Vector3 m_Velocity = Vector3.zero;
+        
+        public AnimationHandler animationHandler;
 
         //JumpHintInit
         public GameObject anzeige;
@@ -144,7 +146,9 @@ namespace Player
                 m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
                 //JumpHinweis
                 anzeige.SetActive(false);
+                animationHandler.Jump();
             }
+            animationHandler.Move(m_Rigidbody2D.velocity, m_Grounded, crouch);
         }
 
 

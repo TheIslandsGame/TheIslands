@@ -10,6 +10,7 @@ namespace Player
     {
 
         public CharacterController2D controller;
+        public AnimationHandler animationHandler;
         public bool isCrouch;
         public bool isJump;
         public bool isSprint;
@@ -96,6 +97,7 @@ namespace Player
         public void SetCrouching(bool crouching)
         {
             isCrouch = crouching;
+            animationHandler.Crouch(isCrouch);
         }
         public void SetSprinting(bool sprinting)
         {

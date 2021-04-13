@@ -52,13 +52,12 @@ namespace Menu
 
         void OnTriggerEnter2D(Collider2D player)
         {
-            if (player.tag == "Player")
+            if (player.CompareTag("Player"))
             {
                 //anzeige = GameObject.FindGameObjectWithTag("UIElements");
                 anzeige1.SetActive(true);
 
             }
-            Debug.Log("TRIGGER aufgerufen");
         }
 
     }
