@@ -37,7 +37,7 @@ namespace Menu
 {
     public class Hint : MonoBehaviour
     {
-        public GameObject hints;
+        public GameObject Hints;
         public GameObject anzeige1;
         public GameObject anzeige2;
 
@@ -52,7 +52,7 @@ namespace Menu
 
         void OnTriggerEnter2D(Collider2D player)
         {
-            if (player.CompareTag("Player"))
+            if (player.tag == "Player")
             {
                 //anzeige = GameObject.FindGameObjectWithTag("UIElements");
                 anzeige1.SetActive(true);

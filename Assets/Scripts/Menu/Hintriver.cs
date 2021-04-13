@@ -25,7 +25,7 @@ namespace Menu
         }
         void OnTriggerExit2D(Collider2D player)
         {
-            if (player.CompareTag("Player"))
+            if (player.tag == "Player")
             {
                 anzeige2.SetActive(false);
 
