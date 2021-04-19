@@ -9,11 +9,15 @@ namespace Player
         public GameObject player;
 
         // Start is called before the first frame update
+        void Start()
+        {
+            player = GameObject.Find("Player");
+        }
+
         void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                player = GameObject.FindWithTag("Player");
                 var pos = transform.position;
                 player.transform.position.Set(pos.x, pos.y, pos.z);
                 Debug.Log(pos);
